@@ -14,12 +14,13 @@
 
 makeCacheMatrix<-function(x=matrix()){
         inv<-NULL
+        storedMatrix<-x
         set<-function(y){
-                x<<-y
+                storedMatrix<<-y
                 inv<<-NULL
         }
         get<-function() {
-                x
+                storedMatrix
         }        
         setinverse<-function(inverse) {
                 inv<<-inverse
